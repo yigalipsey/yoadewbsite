@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="bg-white w-5/6 mx-auto text-black dark:bg-black dark:text-white min-h-[90vh] flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-20 py-12 transition-colors duration-300">
       {/* טקסט */}
-      <div className="flex-1 text-center md:text-right mt-4 md:mt-0 md:mr-5">
+      <div className="flex-1 text-center md:text-right mt-2 md:mt-0 md:mr-5">
         <h1 className="text-3xl md:text-6xl font-bold mb-0 mt-3 md:mt-0 md:mb-2">
           <span className="text-[#32FF72] dark:text-[#28D65A]  font-rubik">
             יועד ליפסי
@@ -24,13 +24,13 @@ const HeroSection = () => {
         <div className="flex flex-wrap justify-center md:justify-start">
           <a
             href="#portfolio"
-            className="bg-[#32FF72] font-rubik text-black font-bold py-3 px-6 rounded-lg hover:bg-[#28D65A] transition"
+            className="bg-[#32FF72] font-rubik text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg hover:bg-[#28D65A] transition"
           >
             האזינו לדוגמאות{" "}
           </a>
           <a
             href="#contact"
-            className="border-2 mr-3 border-[#32FF72] text-[#32FF72] font-bold py-3 px-6 rounded-lg hover:bg-[#32FF72] hover:text-black transition"
+            className="border-2 mr-3 border-[#32FF72] text-[#32FF72] font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg hover:bg-[#32FF72] hover:text-black transition"
           >
             צור קשר
           </a>
@@ -38,7 +38,7 @@ const HeroSection = () => {
       </div>
 
       {/* תמונה */}
-      <div className="flex-1 flex justify-center relative md:mt-0">
+      <div className="flex-1 flex justify-center relative mt-6 md:mt-0">
         {/* צורה */}
         <div className="absolute top-8 -right-10 -left-10 md:top-24 md:right-0 h-[100%] md:w-[100%] md:h-[80%] max-h-[90vh] z-10">
           <Image
