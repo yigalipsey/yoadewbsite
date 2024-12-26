@@ -22,16 +22,25 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollToSection = (id) => {
+    setIsOpen(false);
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       className={`sticky top-0 z-50 transition-colors duration-300 ${
-        isScrolled
-          ? "bg-white bg-opacity-90 text-black"
-          : "bg-transparent text-white"
+        isScrolled || isOpen
+          ? "bg-white text-black"
+          : "bg-transparent text-[#e5e5e5]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between  mx-auto h-16">
+        <div className="flex items-center justify-between mx-auto h-16">
+          {/* כפתור המבורגר */}
           <div className="md:hidden flex justify-end">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -63,69 +72,83 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <Link className="text-xl md:text-2xl font-bold" href="#home">
-              <span className="text-[#e5e5e5]">Yoad</span>
+              <span
+                className={`${
+                  isScrolled || isOpen ? "text-[#8c52ff]" : "text-[#e5e5e5]"
+                }`}
+              >
+                Yoad
+              </span>
               <span className="text-[#fca311] ml-1">Lipsey</span>
             </Link>
           </div>
 
-          {/* קישורים לתפריט במצב מסך רחב */}
+          {/* תפריט במצב רחב */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link
-              href="#examples"
-              className="text-black hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
+            <button
+              onClick={() => scrollToSection("examples")}
+              className="hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
             >
-              Examples
-            </Link>
-            <Link
-              href="#catalogs"
-              className="text-black hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
+              דוגמאות
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
             >
-              Catalogs
-            </Link>
-            <Link
-              href="#services"
-              className="text-black hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
+              קצת עליי
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
             >
-              Services
-            </Link>
-            <Link
-              href="#contact"
-              className="text-black hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Contact
-            </Link>
+              שאלות ותשובות
+            </button>
           </div>
         </div>
       </div>
 
       {/* תפריט במצב נייד */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="#examples"
-              className="block text-black hover:text-[#fca311] px-3 py-2 rounded-md text-base font-medium"
+        <div className="fixed top-0 left-0 w-full h-screen bg-[#14213d] text-white z-40 flex flex-col items-start p-6">
+          {/* כפתור סגירה */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 text-[#fca311] hover:text-white"
+          >
+            <svg
+              className="h-8 w-8"
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 24 24"
             >
-              Examples
-            </Link>
-            <Link
-              href="#catalogs"
-              className="block text-black hover:text-[#fca311] px-3 py-2 rounded-md text-base font-medium"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div className="space-y-6 mt-12 text-right w-full pr-6">
+            <button
+              onClick={() => scrollToSection("examples")}
+              className="block text-3xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
             >
-              Catalogs
-            </Link>
-            <Link
-              href="#services"
-              className="block text-black hover:text-[#fca311] px-3 py-2 rounded-md text-base font-medium"
+              דוגמאות
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="block text-3xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
             >
-              Services
-            </Link>
-            <Link
-              href="#contact"
-              className="block text-black hover:text-[#fca311] px-3 py-2 rounded-md text-base font-medium"
+              קצת עליי
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="block text-3xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
             >
-              Contact
-            </Link>
+              שאלות ותשובות
+            </button>
           </div>
         </div>
       )}

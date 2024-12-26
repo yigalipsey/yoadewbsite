@@ -2,14 +2,19 @@
 
 import React from "react";
 import Image from "next/image";
-import YoadImg from "../../public/images/5.svg"; // החלף בנתיב המתאים לתמונה
+import YoadImg from "../../public/images/hero.svg"; // החלף בנתיב המתאים לתמונה
 
 const HeroSection = () => {
+  const whatsappNumber = "972542211851"; // החלף למספר הוואטסאפ (כולל קידומת מדינה ללא +)
+  const whatsappMessage = encodeURIComponent(
+    "שלום יועד, אני מעוניין בפרטים נוספים על שירותי הקריינות שלך."
+  );
+
   return (
     <section className="w-5/6 mx-auto bg-[#14213d] text-white min-h-[90vh] flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-20 py-12 transition-colors duration-300">
       {/* טקסט */}
       <div className="flex-1 text-center md:text-right md:mt-0 md:mr-5">
-        <h1 className="text-3xl md:text-6xl md:mb-2l[] font-bold ">
+        <h1 className="text-3xl md:text-6xl md:mb-2 font-bold">
           <span className="text-[#fca311] font-rubik">יועד ליפסי</span>
         </h1>
         <h2 className="text-lg md:text-2xl font-rubik font-medium md:mb-2 text-[#e5e5e5]">
@@ -26,7 +31,9 @@ const HeroSection = () => {
             האזינו לדוגמאות
           </a>
           <a
-            href="#contact"
+            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="border-2 mr-3 border-[#fca311] text-[#fca311] font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg hover:bg-[#fca311] hover:text-black transition"
           >
             צור קשר
@@ -35,7 +42,7 @@ const HeroSection = () => {
       </div>
 
       {/* תמונה */}
-      <div className="flex-1 flex justify-center  relative md:mt-0">
+      <div className="flex-1 flex justify-center relative md:mt-0">
         <Image
           src={YoadImg}
           alt="יועד ליפסי"

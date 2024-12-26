@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import LineSvg from "../../public/images/line.svg"; // נתיב ל-SVG של הקו
 
 const YouTubeVideo = ({ videoId }) => {
   return (
@@ -25,6 +24,7 @@ const ExamplesSection = () => {
       { id: "VZVopPZjG6k", title: "קריינות לרדיו 2" },
       { id: "PRgN-tcU_eQ", title: "קריינות לטלוויזיה 1" },
       { id: "A0cRFg95KIw", title: "קריינות לטלוויזיה 2" },
+      { id: "41MRI5Ejia0", title: "סרטון תדמית 1" },
     ],
     קריינות_עבור_סרטוני_תדמית: [
       { id: "RYtN2EeX6Vo", title: "סרטון תדמית 1" },
@@ -32,18 +32,22 @@ const ExamplesSection = () => {
       { id: "7B7lGKK3rVg", title: "סרטון תדמית 3" },
       { id: "36rY8Ew28Kc", title: "סרטון תדמית 4" },
     ],
-    קריינות_לטלוויזיה: [
-      { id: "tNs7nDINook", title: "קריינות לרדיו 3" },
-      { id: "VZVopPZjG6k", title: "קריינות לרדיו 2" },
-      { id: "PRgN-tcU_eQ", title: "קריינות לטלוויזיה 1" },
-      { id: "A0cRFg95KIw", title: "קריינות לטלוויזיה 2" },
+    קריינות_למרכזיה: [
+      { id: "p5i8uAI2noI", title: "קריינות למרכזיה 1" },
+      { id: "ol_igyGeK0w", title: "קריינות למרכזיה 2" },
+      { id: "kKYwbC4Bv2I", title: "קריינות למרכזיה 3" },
+    ],
+    קריינות_ודיבוב: [
+      { id: "bvZU9eyx3Kk", title: "קריינות לרדיו 3" },
+      { id: "cKGBU-gYazU", title: "קריינות לרדיו 2" },
     ],
   };
 
   const [visibleVideos, setVisibleVideos] = useState({
     תשדירי_חסות: 3,
     קריינות_עבור_סרטוני_תדמית: 3,
-    קריינות_לטלוויזיה: 3,
+    קריינות_ודיבוב: 3,
+    קריינות_למרכזיה: 3,
   });
 
   const handleShowMore = (category) => {
@@ -54,14 +58,10 @@ const ExamplesSection = () => {
   };
 
   return (
-    <section className="bg-[#14213d] text-white py-12 px-6 md:px-10 w-4/5 mx-auto">
-      {/* כותרת ראשית */}
-      {/* <div className=" flex justify-center mb-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#8c52ff]">
-          העבודות שלי
-        </h2>
-      </div> */}
-
+    <section
+      id="examples"
+      className="bg-[#14213d] text-white py-12 px-6 md:px-10 w-4/5 mx-auto"
+    >
       {/* קטגוריות */}
       {Object.keys(categories).map((category, index) => (
         <div key={index} className="mb-8">
@@ -70,13 +70,6 @@ const ExamplesSection = () => {
             <h3 className="text-xl md:text-2xl font-bold text-[#fca311]">
               {category.replace(/_/g, " ")}
             </h3>
-            {/* <div className="flex justify-start mt-2">
-              <img
-                src={LineSvg.src}
-                alt="קו תחתון"
-                className="w-2/5 md:w-1/4"
-              />
-            </div> */}
           </div>
 
           {/* סרטונים */}
