@@ -26,14 +26,18 @@ const AboutMeSection = () => {
         <h2 className="text-4xl md:text-4xl font-bold mb-2 text-[#fca311]">
           קצת עליי
         </h2>
-        <h3 className="text-lg md:text-md font-medium mb-4 text-[#e5e5e5]">
+        <h3 className="text-lg md:text-md font-medium mb-4 text-[#e5e5e5] leading-relaxed">
           שלום, אני יועד ליפסי, קריין מקצועי עם ניסיון של למעלה מ-17 שנים בתחום.
-          במהלך הקריירה שלי הייתי קריין חדשות וצברתי ניסיון עשיר בכל סוגי
-          הקריינות – החל מקריינות לרדיו ולטלוויזיה, דרך סרטי תדמית ומצגות
-          עסקיות, ועד קריינות למרכזיות ודיבוב מקצועי. אני גאה ביכולת שלי להתאים
-          את הסגנון והטון הנכון לכל פרויקט, ולעזור למותגים ולחברות להעביר את
-          המסר שלהם בצורה מקצועית, מרגשת ומשפיעה. אם אתם מחפשים קול שיספר את
-          הסיפור שלכם, אני כאן בשבילכם.
+          במהלך הקריירה שלי הייתי קריין הבית של שפ״א (שירותי פרסום אזורי) למשך
+          מספר שנים, וקריינתי לעשרות פרסומות לרדיו ששודרו בכל רחבי הארץ. בנוסף,
+          הייתי קריין חדשות ברדיו "קול ברמה", ועבדתי עם משרדי הפרסום הגדולים
+          והמובילים במשק. שיתפתי פעולה עם מפיקים בעלי שם ועזרתי למותגים וחברות
+          להעביר את המסרים שלהם בצורה מקצועית ומשפיעה. אני מתמחה בהתאמת הסגנון
+          והטון הנכון לכל פרויקט, החל מקריינות לרדיו ולטלוויזיה, דרך סרטי תדמית
+          ומצגות עסקיות, ועד קריינות למרכזיות ודיבוב מקצועי.
+          <br />
+          אם אתם מחפשים קול שיספר את הסיפור שלכם בצורה ייחודית ומרגשת, אני כאן
+          בשבילכם.
         </h3>
 
         <div className="flex mx-auto md:mx-0 justify-between items-center text-center md:w-4/5">
@@ -41,7 +45,7 @@ const AboutMeSection = () => {
           <div className="flex-1 flex flex-col items-center">
             <div className="flex-1 flex items-center justify-center">
               <h4 className="text-2xl md:text-3xl font-bold text-[#fca311]">
-                150+
+                700+
               </h4>
             </div>
             <div className="flex-2 flex items-center justify-center">
@@ -53,7 +57,7 @@ const AboutMeSection = () => {
           <div className="flex-1 flex flex-col items-center border-x border-[#e5e5e5]">
             <div className="flex-1 flex items-center justify-center">
               <h4 className="text-2xl md:text-3xl font-bold text-[#fca311]">
-                10+
+                70+
               </h4>
             </div>
             <div className="flex-2 flex items-center justify-center">
