@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa"; // ייבוא אייקון ה-WhatsApp
 import Image from "next/image";
 import YoadImg from "../../public/images/hero.svg"; // החלף בנתיב המתאים לתמונה
 
@@ -21,7 +22,8 @@ const HeroSection = () => {
           שירותי קריינות מקצועיים לכל מטרה
         </h2>
         <p className="text-md md:text-xl mb-8 font-rubik text-[#e5e5e5]">
-          קריינות לרדיו, טלוויזיה, פרסומות, פודקאסטים, דיבוב, והקלטות למרכזיות.
+          קריינות מקצועית לרדיו, טלוויזיה, פרסומות, פודקאסטים, דיבוב, והקלטות
+          למרכזיות.
         </p>
         <div className="flex flex-wrap justify-center md:justify-start">
           <a
@@ -34,9 +36,9 @@ const HeroSection = () => {
             href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 mr-3 border-[#fca311] text-[#fca311] font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg hover:bg-[#fca311] hover:text-black transition"
+            className="flex items-center border-2 mr-3 border-[#fca311] text-[#fca311] font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg hover:bg-[#fca311] hover:text-black transition"
           >
-            צור קשר
+            <FaWhatsapp className="mr-2 order-1 text-lg" /> צור קשר
           </a>
         </div>
       </div>
@@ -48,7 +50,7 @@ const HeroSection = () => {
           alt="יועד ליפסי"
           width={400}
           height={400}
-          className="relative z-20 mr-5 w-[100%] md:w-[600px] mr- max-h-[50vh] md:max-h-[90vh] object-contain"
+          className="relative z-20 mr-5 w-[100%] md:w-[600px] max-h-[50vh] md:max-h-[90vh] object-contain"
         />
       </div>
     </section>

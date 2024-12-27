@@ -57,7 +57,7 @@ const AboutMeSection = () => {
           <div className="flex-1 flex flex-col items-center border-x border-[#e5e5e5]">
             <div className="flex-1 flex items-center justify-center">
               <h4 className="text-2xl md:text-3xl font-bold text-[#fca311]">
-                70+
+                80+
               </h4>
             </div>
             <div className="flex-2 flex items-center justify-center">

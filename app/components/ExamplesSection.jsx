@@ -20,11 +20,12 @@ const YouTubeVideo = ({ videoId }) => {
 const ExamplesSection = () => {
   const categories = {
     תשדירי_חסות: [
+      { id: "gK7kyaxFQ-A", title: "סרטון תדמית 1" },
       { id: "tNs7nDINook", title: "קריינות לרדיו 3" },
       { id: "VZVopPZjG6k", title: "קריינות לרדיו 2" },
       { id: "PRgN-tcU_eQ", title: "קריינות לטלוויזיה 1" },
+
       { id: "A0cRFg95KIw", title: "קריינות לטלוויזיה 2" },
-      { id: "41MRI5Ejia0", title: "סרטון תדמית 1" },
     ],
     קריינות_עבור_סרטוני_תדמית: [
       { id: "RYtN2EeX6Vo", title: "סרטון תדמית 1" },

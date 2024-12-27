@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Logo from "../../public/images/logo.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,22 +85,22 @@ const Navbar = () => {
           </div>
 
           {/* תפריט במצב רחב */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:grid grid-cols-3    w-2/5 items-center text-center">
             <button
               onClick={() => scrollToSection("examples")}
-              className="hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
+              className="hover:text-[#fca311] text-lg px-3 py-2 rounded-md  font-medium"
             >
               דוגמאות
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
+              className="hover:text-[#fca311] px-3 py-2 rounded-md text-lg font-medium"
             >
               קצת עליי
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="hover:text-[#fca311] px-3 py-2 rounded-md text-sm font-medium"
+              className="hover:text-[#fca311] px-3 py-2 rounded-md text-lg font-medium"
             >
               שאלות ותשובות
             </button>
@@ -130,25 +131,40 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <div className="space-y-6 mt-12 text-right w-full pr-6">
+          <div className="space-y-3 mt-12 text-right w-full pr-2">
             <button
               onClick={() => scrollToSection("examples")}
-              className="block text-3xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
+              className="block text-2xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
             >
               דוגמאות
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block text-3xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
+              className="block text-2xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
             >
               קצת עליי
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="block text-3xl hover:text-[#fca311] px-3 py-2 rounded-md font-medium"
+              className="block text-2xl hover:text-[#fca311]  px-3 py-2 rounded-md font-medium"
             >
               שאלות ותשובות
             </button>
+            <div className=" mt-1">
+              <Link
+                className="text-xl mr-4  py-6 mt-5  md:text-2xl font-bold"
+                href="#home"
+              >
+                <span
+                  className={`${
+                    isScrolled || isOpen ? "text-[#8c52ff]" : "text-[#e5e5e5]"
+                  }`}
+                >
+                  Yoad
+                </span>
+                <span className="text-[#fca311] ml-1">Lipsey</span>
+              </Link>
+            </div>
           </div>
         </div>
       )}
