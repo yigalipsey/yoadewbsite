@@ -98,10 +98,23 @@ const FAQSection = () => {
       </div>
 
       {/* קרדיט */}
-      <div className="mt-12 text-center text-[#fca311] text-sm">
-        <p>
-          האתר עוצב ונבנה על ידי <span className="font-bold">יגאל ליפסי</span>
-        </p>
+      <div className="mt-12 text-center text-[#e5e5e5]/70 text-sm">
+        <span className="flex items-center justify-center gap-2">
+          עוצב ופותח על ידי
+          <a
+            href="https://www.bizcraftil.com/he"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center hover:opacity-80 transition-opacity"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/bizcraft-logo.avif"
+              alt="BIZCRAFT"
+              className="h-4 w-auto brightness-0 invert"
+            />
+          </a>
+        </span>
       </div>
     </section>
   );
